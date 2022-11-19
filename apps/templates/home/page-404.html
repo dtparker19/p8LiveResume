@@ -1,33 +1,33 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-fullscreen.html" %}
 
-{% block title %} Error 404 {% endblock %} 
+{% block title %} 404 Page {% endblock %}
 
-<!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock %}
+{% block content %}   
 
-{% block body_class %}{% endblock %}
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <div class="auth-bg">
+                <span class="r"></span>
+                <span class="r s"></span>
+                <span class="r s"></span>
+                <span class="r"></span>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="mb-4">
+                        <i class="feather x-circle"></i>
+                    </div>
+                    <h3 class="mb-4">Error 404</h3>
 
-{% block content %}
+                    <br />
 
-  {% include 'includes/navigation.html' %}
+                    <span class="mb-0 text-muted">
+                        Page not found - <a href="/">Home</a> 
+                    </span>
 
-  <section class="my-10">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 my-auto">
-          <h1 class="display-1 text-bolder text-gradient text-danger">Error 404</h1>
-          <h2>Page not found</h2>
-          <p class="lead">We suggest you to go to the homepage while we solve this issue.</p>
-          <button type="button" class="btn bg-gradient-dark mt-4">Go to Homepage</button>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-6 my-auto position-relative">
-          <img class="w-100 position-relative" src="/static/assets/img/illustrations/error-404.png" alt="404-page-page-error">
-        </div>
-      </div>
     </div>
-  </section>
 
 {% endblock content %}
-
-<!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock %}

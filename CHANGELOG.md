@@ -1,7 +1,11 @@
 # Change Log
 
-## [1.0.0] 2021-12-26
-### Initial release
+## CodeBase version: 2stable.0.1 / 2022-01-15
+### Improvements
 
-- UI Version: `Soft UI Design PRO` **v1.0.8** 
-- Codebase: [Django Boilerplate](https://github.com/app-generator/boilerplate-code-django) v1.0.7
+- Dependencies update (all packages) 
+  - Django==4.0.1
+- Settings update for Django 4.x
+  - `New Parameter`: CSRF_TRUSTED_ORIGINS
+    - [Origin header checking isn`t performed in older versions](https://docs.djangoproject.com/en/4.0/ref/settings/#csrf-trusted-origins)  
+

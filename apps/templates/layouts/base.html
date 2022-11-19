@@ -1,49 +1,64 @@
-<!--
-=========================================================
-* Soft UI Design System PRO - v1.0.8
-=========================================================
-
-* Product Page:  https://www.creative-tim.com/product/soft-ui-design-system-pro 
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
-  
-  <title>
-    Django Soft Design System PRO - {% block title %}{% endblock %} | AppSeed
-  </title>
+    <title>
+        Django Datta Able - {% block title %}{% endblock %} | AppSeed
+    </title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description"
+          content="Free Datta Able Admin Template come up with latest Bootstrap 4 framework with basic components, form elements and lots of pre-made layout options"/>
+    <meta name="keywords"
+          content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
+    <meta name="author" content="CodedThemes"/>
 
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="/static/assets/css/soft-design-system-pro.css?v=1.0.8" rel="stylesheet" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="{{ ASSETS_ROOT }}/images/favicon.ico" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="{{ ASSETS_ROOT }}/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="{{ ASSETS_ROOT }}/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="{{ ASSETS_ROOT }}/css/style.css">
+    <!-- dark mode css -->
+    <link rel="stylesheet" href="{{ ASSETS_ROOT }}/css/dark.css">
+      <!-- dark mode css -->
+      <link rel="stylesheet" href="{{ ASSETS_ROOT }}/css/live-resume.css">
+
+    <!-- Specific CSS goes HERE -->
+    {% block stylesheets %}{% endblock stylesheets %}
 
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body>
 
-  {% block content %}{% endblock content %}    
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
 
-  {% include 'includes/scripts.html' %} 
+    {% include 'includes/sidebar.html' %}
 
-   <!-- Specific Page JS goes HERE  -->
-   {% block javascripts %}{% endblock javascripts %}  
+    {% include 'includes/navigation.html' %}
+
+
+    {% block content %}{% endblock content %}
+
+    {% include 'includes/scripts.html' %}
+
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}
 
 </body>
 </html>
